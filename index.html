@@ -15,20 +15,22 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(45deg, #800080, #a64dff, #ff66b2, #a64dff, #800080);
-            background-size: 600% 600%; /* Increased the size for a smoother gradient transition */
-            animation: gradientAnimation 15s infinite;
-            animation-timing-function: ease-in-out; /* Improved timing function for smoother animation */
-            animation-direction: alternate; /* Alternate between forward and reverse animation */
+            background: linear-gradient(45deg, #400040, #803366, #cc3385, #803366, #400040);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s infinite;
         }
 
         h1 {
             font-size: 4em;
-            background: -webkit-linear-gradient(left, #ff00cc, #ff99cc); 
+            background: -webkit-linear-gradient(left, #ff0055, #ff6699); 
             -webkit-background-clip: text;
             color: transparent;
             margin: 0;
-            animation: textAnimation 5s infinite alternate, pulsate 1.5s infinite;
+            transition: transform 0.3s;
+        }
+
+        h1:hover {
+            transform: scale(1.1);
         }
 
         img {
@@ -41,26 +43,11 @@
             0% {
                 background-position: 0% 50%;
             }
-            100% {
+            50% {
                 background-position: 100% 50%;
             }
-        }
-
-        @keyframes textAnimation {
-            0%, 100% {
-                background-position: 100% 0;
-            }
-            50% {
-                background-position: 0 100%;
-            }
-        }
-
-        @keyframes pulsate {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
+            100% {
+                background-position: 0% 50%;
             }
         }
     </style>
