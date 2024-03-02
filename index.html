@@ -21,11 +21,18 @@
 
         h1 {
             font-size: 4em;
-            background: -webkit-linear-gradient(left, #ff00cc, #ff99cc); /* Pink gradient */
+            background: -webkit-linear-gradient(left, #ff00cc, #ff99cc); 
             -webkit-background-clip: text;
             color: transparent;
             margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
             animation: textAnimation 5s infinite alternate;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            margin-top: 20px; 
         }
 
         @keyframes gradientAnimation {
@@ -52,5 +59,6 @@
 </head>
 <body>
     <h1>Amethyst</h1>
+    <img src="https://raw.githubusercontent.com/seroina/amethyst-website/main/amethyst_logo.png" alt="Amethyst Logo">
 </body>
 </html>
