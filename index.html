@@ -15,12 +15,16 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background: linear-gradient(45deg, #800080, #a64dff, #ff66b2, #a64dff, #800080);
             background-size: 400% 400%;
             animation: gradientAnimation 10s infinite;
         }
 
         h1 {
             font-size: 4em;
+            background: -webkit-linear-gradient(left, #ff00cc, #ff99cc); 
+            -webkit-background-clip: text;
+            color: transparent;
             margin: 0;
             animation: textAnimation 5s infinite alternate;
         }
@@ -33,41 +37,25 @@
 
         @keyframes gradientAnimation {
             0% {
-                background: linear-gradient(45deg, #800080, #a64dff, #ff66b2, #a64dff, #800080);
+                background-position: 0% 50%;
             }
             50% {
-                background: linear-gradient(45deg, #ff00cc, #ff99cc);
+                background-position: 100% 50%;
             }
             100% {
-                background: linear-gradient(45deg, #800080, #a64dff, #ff66b2, #a64dff, #800080);
+                background-position: 0% 50%;
             }
         }
 
         @keyframes textAnimation {
-            0%, 100% {
-                color: transparent;
+            0% {
+                background-position: 100% 0;
             }
-            50% {
-                color: white; /* Change this to the desired color when the text is visible */
+            100% {
+                background-position: 0 100%;
             }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const body = document.body;
-            const h1 = document.querySelector("h1");
-
-            // Check for the text color and adjust the background accordingly
-            function updateBackground() {
-                const textColor = window.getComputedStyle(h1).color;
-                body.style.background = textColor === "rgb(255, 255, 255)" ? "#800080" : "#ff99cc";
-            }
-
-            // Trigger the function on page load and text animation completion
-            updateBackground();
-            h1.addEventListener("animationiteration", updateBackground);
-        });
-    </script>
 </head>
 <body>
     <h1>Amethyst</h1>
