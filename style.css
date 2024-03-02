@@ -1,0 +1,44 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #400040, #803366, #cc3385, #803366, #400040);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s infinite;
+        }
+
+        h1 {
+            font-size: 4em;
+            background: -webkit-linear-gradient(left, #ff0055, #ff6699); 
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 0;
+            transition: transform 0.3s;
+        }
+
+        h1:hover {
+            transform: scale(1.1);
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            margin-top: 20px; 
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
