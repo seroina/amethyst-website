@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Amethyst</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: purple;
+            color: pink;
+            text-align: center;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        header {
+            padding: 20px;
+            background: linear-gradient(to right, #ff00cc, #ff99cc); /* Pink gradient */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .animated-element {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        footer {
+            padding: 20px;
+            background: linear-gradient(to right, #ff99cc, #ff00cc); /* Reverse pink gradient */
+            color: purple;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <header>
+        <h1>Amethyst</h1>
+    </header>
+
+    <section>
+        <p class="animated-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="animated-element">
+            <img src="animated_image.gif" alt="Animated Image">
+        </div>
+        <p class="animated-element">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Amethyst. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add basic JavaScript for animations
+        document.addEventListener("DOMContentLoaded", function () {
+            const animatedElements = document.querySelectorAll('.animated-element');
+
+            function fadeInElements() {
+                animatedElements.forEach(element => {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                });
+            }
+
+            // Trigger animations when the page is loaded
+            fadeInElements();
+        });
+    </script>
 </body>
 </html>
