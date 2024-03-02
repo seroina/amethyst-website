@@ -1,7 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8"><!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amethyst</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, purple, #800080, purple);
+            animation: gradientAnimation 10s infinite linear;
+        }
+
+        h1 {
+            font-size: 4em;
+            background: -webkit-linear-gradient(left, #ff00cc, #ff99cc); /* Pink gradient */
+            -webkit-background-clip: text;
+            color: transparent;
+            margin: 0;
+            animation: textAnimation 5s infinite alternate;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes textAnimation {
+            0% {
+                background-position: 100% 0;
+            }
+            100% {
+                background-position: 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Amethyst</h1>
+</body>
+</html>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amethyst</title>
     <style>
